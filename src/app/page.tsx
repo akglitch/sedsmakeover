@@ -15,6 +15,7 @@ export default function Home() {
   const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.95])
 
   return (
+    <div className="container-lg">
     <div ref={containerRef} className="bg-white">
 
       {/* MINIMALIST HERO - Aesop Style */}
@@ -45,13 +46,13 @@ export default function Home() {
             className="max-w-4xl"
           >
             {/* Minimalist Typography */}
-            <h1 className="font-serif text-6xl md:text-8xl lg:text-9xl text-charcoal mb-8 tracking-tight font-light">
+            <h1 className="container font-serif text-6xl md:text-8xl lg:text-9xl text-charcoal mb-8 tracking-tight font-light">
               SedsMakeover
             </h1>
 
             <div className="w-16 h-[1px] bg-charcoal/30 mx-auto mb-8"></div>
 
-            <p className="text-charcoal/60 text-sm md:text-base tracking-[0.2em] uppercase font-medium mb-12 max-w-2xl mx-auto leading-relaxed">
+            <p className=" container text-charcoal/60 text-sm md:text-base tracking-[0.2em] uppercase font-medium mb-12 max-w-2xl mx-auto leading-relaxed">
               A sanctuary for the discerning. Where beauty is refined, not redefined.
             </p>
 
@@ -161,10 +162,10 @@ export default function Home() {
       {/* IMAGE BREAK */}
       <section className="h-[70vh] relative">
         <Image
-          src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=2071&auto=format&fit=crop"
+          src="/img2.jpg"
           alt="Sanctuary"
           fill
-          className="object-cover grayscale"
+          className="object-cover  "
         />
         <div className="absolute inset-0 bg-white/50" />
       </section>
@@ -193,6 +194,7 @@ export default function Home() {
         </div>
       </section>
 
+    </div>
     </div>
   )
 }
